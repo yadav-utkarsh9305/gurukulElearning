@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .html,body{
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+           background-color: rgb(84, 124, 159);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       
+     .log-in-page{
+        width: 300px;
+       padding-bottom: 8px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        filter: blur(0.3px);
+        background-image: url(https://e1.pxfuel.com/desktop-wallpaper/424/7/desktop-wallpaper-html-body-backgrounds-full-screen-html5-background.jpg);
+    background-size: cover;
+   
+        box-shadow: 5px 5px  ;
+       
+        
+        
+
+     }
+    .head-icon{
+        width: 100px;
+        height: 100px;
+       display: flex;
+        border: 2px solid black;
+        font-size: 70px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20%;
+        margin-left: 33%;
+        border-radius: 50%;
+        background-color: rgb(240, 235, 235);
+       
+ }
+ h3{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 900;
+    color: blue;
+   
+
+ }
+ form{
+    width: 100%;
+   padding: 2px 20px;
+   color: black;
+   /* font-size: 17px; */
+   font-weight: 800;
+   
+ }
+
+ 
+ input{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(155, 155, 190);
+    
+ }
+ input::placeholder{
+   color: black;
+   text-indent: 5px;
+   
+ }
+ .btn{
+    width: 100%;
+
+ }
+ .btn input{
+    width: 40%;
+    /* margin-left: 3%; */
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: #2172AF;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    cursor: pointer;
+ }
+ .btn input:hover{
+    background:linear-gradient(rgb(47, 47, 164), rgb(187, 63, 198));
+    color: black;
+    font-weight: 700;
+ }
+ .btn input:active{
+    scale: 0.89;
+ }
+
+.conf {
+   width: 86%;
+  
+   position: relative;
+   display: flex;
+   align-items: center;
+
+}
+.conf input{
+width: 92%;
+height: 30px;
+    border-radius: 5px;
+}
+.conf i{
+position: absolute;
+right: 20px;
+cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+   
+<div class="log-in-page">
+    <div class="head-icon">
+        <i class="ri-map-pin-user-fill" ></i>
+        </div>
+        <h3>User-Sign Up</h3>
+        <form action="" onsubmit=" return validate()">
+          <label for="">First Name</label>
+            <br>
+ <input type="text" placeholder="Enter your name:">
+ <Br/>
+ <label for="">Last Name</label>
+<input type="text" placeholder="Enter your name:">
+ <label for="">Email:</label>
+ <br>
+ <input type="email" >
+ <br>
+<label for="">Password:</label>
+<br>
+<input type="password" class="pass">
+
+<label for="">Confirm-Password:</label>
+<div class="conf">
+<input type="password" class="cpass" onkeyup="check(this);"><i class="ri-eye-off-line" onclick="show(this);"></i> </div>
+
+ <marquee behavior=" " direction=""><p id="error" style="width: 100%;height: 15px; font-size: 14px; color: red;font-weight: lighter; margin-top: 5px;" ></p></marquee>
+
+<div class="btn">   <input type="reset" name="button" id="" value="Reset">
+    <input type="submit" name="button" id="" value="Submit"></div>
+        
+   
+   </div>
+
+        </form>
+       
+</body>
+<script>
+  
+   var first = document.querySelector(".pass");
+   var second = document.querySelector(".cpass");
+   function show(x){
+      var data = first.getAttribute('type');
+      var data1 = second.getAttribute('type');
+      if(data=='password'){
+         first.setAttribute('type','text');
+         second.setAttribute('type','text');
+      }
+      else{
+         first.setAttribute('type','password');
+         second.setAttribute('type','password');
+      }
+      
+   }
+   flage = 1;
+    function check(elem) {
+     
+       
+       if(elem.value.length >0){
+         if(elem.value == first.value){
+            document.getElementById("error").innerText = "";
+            flage = 0;
+         }
+        else{
+         document.getElementById("error").innerText = "Password is not Same";
+         flage = 1;
+        } 
+       }
+       else{
+         document.getElementById("error").innerText = "";
+         flage = 0;
+       }
+       
+    }
+    function validate(){
+      if(flage== 0){
+         return true;
+      }
+      else{
+         alert('invalid password please check !!');
+         return false;
+         
+      }
+    }
+ 
+</script>
+</html>

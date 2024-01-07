@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding-left: 0;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(120, 221, 102, 0.645);
+  overflow-x: hidden;
+}
+html{
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.scroll-note{
+  min-height: 300px;
+  background:linear-gradient(to left,rgb(34, 67, 176),rgba(255, 255, 0, 0.677));
+  border: 2px dotted yellow;
+ border-radius: 20px;
+  color: red;
+
+}
+.scroll-no{
+ margin-top: 30px;
+  background:linear-gradient(to left,rgb(34, 67, 176),rgba(255, 255, 0, 0.677));
+  border: 2px dotted yellow;
+ 
+  color: red;
+  border-radius: 20px;
+
+}
+.background-img{
+  /* background-image: url(images/log.avif); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius:20px ;
+  border-top-left-radius: 20px;
+ }
+
+ .foot-pannel a{
+  text-decoration: none;
+  color: azure;
+ }
+ 
+ .hober{
+  background-color: aqua;
+  
+ }
+ .responsive{
+  width: 80%; 
+  height: 380px;
+  margin-left: 10%;
+ }
+ .Gurukul{
+  width: 130px;
+  
+ }
+ .ourteacher{
+  text-align: center; 
+  margin-top: 10px;
+  font-size: 35px;
+  color: blue; 
+   text-shadow: 2px 3px rgb(101, 63, 203);
+ }
+ .Comment{
+  text-indent: 5px;
+  margin-left: 0px;
+
+  
+ }
+ @media only screen and (max-width: 455px)
+
+  {
+    .responsive{
+      
+      width: 100%;
+      height: 150px;
+      margin-left: 0%;
+      
+    }
+   
+    .Gurukul{
+      width: 70px;
+      height:100px ;
+      margin-left: 0px;
+      
+     }
+     .navbar-brand{
+  width:50px;
+     }
+     .ourteacher{
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: none;
+
+     }
+    
+    
+ }
